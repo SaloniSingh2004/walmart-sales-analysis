@@ -1,41 +1,79 @@
-# Walmart Sales Data Pipeline & SQL Analytics
+# Walmart Sales Analysis & Power BI Dashboard
 
-An end-to-end data engineering and business analytics project that automates retail dataset ingestion from Kaggle, performs data cleaning and feature engineering in Python, loads structured records into MySQL, and answers core business questions using advanced SQL window functions.
+An end-to-end retail data analytics project that uses Python, MySQL, SQL, and Power BI to clean, transform, analyze, and visualize Walmart sales data.
 
----
+The project follows a complete analytics workflow:
 
-## 🛠️ Tech Stack & Tools
-* **Programming & ETL:** Python (Pandas, SQLAlchemy, PyMySQL)
-* **Database:** MySQL
-* **Data Source:** Kaggle API (Walmart 10K Sales Dataset)
-* **Development Environment:** VS Code, Virtualenv
+**Raw Sales Data → Python Data Cleaning → MySQL → SQL Analysis → Power BI Dashboard → Business Insights**
 
 ---
 
-## 📊 Pipeline Architecture & Workflow
-1. **Automated Extraction:** Downloaded the dataset using the Kaggle API.
-2. **Data Cleaning & Preprocessing:**
-   * Removed currency symbols (`$`) from monetary fields and converted them to numerical data types.
-   * Handled null values and standardized column casing.
-3. **Feature Engineering:**
-   * Calculated `total` (`unit_price * quantity`) and `profit` (`total * profit_margin`).
-   * Parsed timestamps into `hour` and categorized sales into shifts (`Morning`, `Afternoon`, `Evening`).
-4. **Database Ingestion:** Migrated the transformed dataset into MySQL using SQLAlchemy 2.0.
-5. **Business Intelligence:** Authored optimized SQL queries using Common Table Expressions (CTEs) and `RANK() OVER (PARTITION BY ...)` to uncover branch-level insights.
+## 📌 Project Overview
+
+This project analyzes Walmart sales data to understand sales performance, profitability, customer purchasing behavior, branch-level performance, product categories, payment methods, and sales patterns across different time periods.
+
+The project combines data preprocessing and feature engineering in Python with SQL-based business analysis and interactive Power BI dashboards.
+
+The objective is to transform raw transactional data into structured information that can be used to answer practical business questions and support data-driven decision-making.
 
 ---
 
-## 💡 Key Business Questions Solved
-* Identified the highest-rated product category for every store branch.
-* Determined peak sales days (busiest transaction days) across branches.
-* Analyzed branch payment preferences across credit card, cash, and digital wallets.
-* Evaluated aggregate revenue and profitability across all product categories.
-* Assessed shift-wise performance to isolate high-volume operational hours.
+## 🎯 Objectives
+
+The main objectives of this project are:
+
+- Clean and prepare raw Walmart sales data for analysis.
+- Standardize inconsistent column names and data types.
+- Handle missing values and invalid data.
+- Create calculated fields such as total sales and profit.
+- Transform date and time information into useful analytical features.
+- Store the processed dataset in MySQL.
+- Use SQL to answer business-related analytical questions.
+- Analyze sales and profitability across product categories and branches.
+- Analyze customer payment preferences.
+- Identify sales patterns across different time shifts.
+- Build an interactive Power BI dashboard for visual analysis.
+- Present business information through clear KPIs and visualizations.
 
 ---
 
-## 🚀 How to Run
-1. Clone repository:
-   ```bash
-   git clone [https://github.com/SaloniSingh2004/walmart-sales-analysis.git](https://github.com/SaloniSingh2004/walmart-sales-analysis.git)
-   cd walmart-sales-analysis
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Python | Data cleaning and preprocessing |
+| Pandas | Data manipulation and transformation |
+| SQLAlchemy | Python-to-MySQL database connectivity |
+| PyMySQL | MySQL database connection |
+| MySQL | Data storage and SQL analysis |
+| SQL | Business analysis and querying |
+| Power BI | Interactive dashboards and visualization |
+| DAX | Power BI calculations and measures |
+| Git | Version control |
+| GitHub | Project repository and version management |
+| VS Code | Development environment |
+
+---
+
+## 🔄 Project Workflow
+
+```text
+                    Walmart Sales Dataset
+                            │
+                            ▼
+                    Python / Pandas
+                            │
+                Data Cleaning & Processing
+                            │
+                            ▼
+                         MySQL
+                            │
+                    SQL Business Analysis
+                            │
+                            ▼
+                       Power BI
+                            │
+              Interactive Dashboards
+                            │
+                            ▼
+                   Business Insights
